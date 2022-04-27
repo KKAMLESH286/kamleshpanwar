@@ -51,10 +51,9 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "JavaScript",
-  "React",
-  "Node",
+    "Cross Platform App Development",
   "Flutter",
   "Firebase",
+  "React",
   "Material UI",
 ];
