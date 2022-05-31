@@ -1,33 +1,33 @@
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "Advance Capital Pay",
+    subtitle: "The Future of Banking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Send, Save and manage your money and cryptocurrency, all in one place. AdvanceCapitalPay is the Leading Pioneer for the Future Banking. Easy access to sending money to over 50 Countries across the world, up to 10x cheaper most banks.",
     image: "./size.jpg",
     // link: "https://reactbootcamp.com",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Flares",
+    subtitle: "skincare app to discover the non-infectious skincare products",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Skincare app to discover the non-infectious ingredients that can be used to make your skin healthy and glowing. Also, help you to get rid of the infectious skin products.",
     image: "./office skincare.jpg",
     // link: "https://reactbootcamp.com",
   },
   {
-    title: "DevChat",
-    subtitle: "React and Firebase",
+    title: "Tarakki",
+    subtitle: "A Job portal for skilled labor",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Tarakki is a Job portal for skilled labor. It is a platform where you can find the best jobs for you. You can also post your own jobs and hire the best labor. You can search through the job postings, or post a job of your own.",
     image: "./tarakki.jpg",
     // link: "https://reactbootcamp.com",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
+    title: "TrueTest App",
+    subtitle: "App to help you find the test reports for you in one place",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "This app is to check or view Infections Disease Report of the patient as well as his/her relatives. Patient can view pdf of the test results using the app. You can use this app to check the status of  Disease Report.",
     image: "./tru test 1.jpg",
     // link: "https://reactbootcamp.com",
   },
