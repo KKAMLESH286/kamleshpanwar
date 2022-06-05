@@ -53,6 +53,7 @@ export const testimonials = [
 export const skills = [
     "Cross Platform App Development",
   "Flutter",
+  "Dart",
   "Firebase",
   "React",
   "Material UI",
