@@ -31,8 +31,7 @@ const  dataPost =()=>{
     return axios.post(ContactUrl, { name: Ename, email: Eemail, message: Emessage });   
 }
     const dataPostSubmit = (e) => {
-        notify();
-        debugger
+        e.preventDefault(); 
         return axios.post("https://thingproxy.freeboard.io/fetch/https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
         {
             name: e.target[0].value,
