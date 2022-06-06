@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import { notify } from "../utility";
 export const ContactUrl = `${process.env.REACT_APP_API_HIRE_URL}`
 
 
@@ -30,8 +31,9 @@ const  dataPost =()=>{
     return axios.post(ContactUrl, { name: Ename, email: Eemail, message: Emessage });   
 }
     const dataPostSubmit = (e) => {
+        notify();
         debugger
-        return axios.post("https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
+        return axios.post("https://thingproxy.freeboard.io/fetch/https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
         {
             name: e.target[0].value,
             email: e.target[1].value,
@@ -102,7 +104,7 @@ const  dataPost =()=>{
                             onChange={handleClick}
                             type="text"
                             id="name"
-                            defaultValue="Name"
+                            defaultValue=""
                             name="name"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         />
@@ -114,7 +116,7 @@ const  dataPost =()=>{
                         <input
                             onChange={handleClick}
                             type="email"
-                            defaultValue="mail.com"
+                            defaultValue=""
                             id="email"
                             name="email"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -129,7 +131,7 @@ const  dataPost =()=>{
                         <textarea
                             onChange={handleClick}
                             id="message"
-                            defaultValue="Message"  
+                            defaultValue=""  
                             name="message"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                         />
