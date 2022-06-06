@@ -27,23 +27,25 @@ export default function Contact() {
         }
     }
 
-const  dataPost =()=>{
-    return axios.post(ContactUrl, { name: Ename, email: Eemail, message: Emessage });   
-}
-    const dataPostSubmit = (e) => {
-        e.preventDefault(); 
-        return axios.post("https://thingproxy.freeboard.io/fetch/https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
-        {
-            name: e.target[0].value,
-            email: e.target[1].value,
-            message: e.target[2].value
-        }, { 
+
+
+    const dataPostSubmit = async (e) => {
+        e.preventDefault();
+        let response = await axios.post("https://thingproxy.freeboard.io/fetch/https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
+            {
+                name: e.target[0].value,
+                email: e.target[1].value,
+                message: e.target[2].value
+            }, {
             headers: {
-            'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    }
-          },);
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        });
+        if(response.status === 200) {
+            notify();
+        }
     }
     return (
         <section id="contact" className="relative">
@@ -130,7 +132,7 @@ const  dataPost =()=>{
                         <textarea
                             onChange={handleClick}
                             id="message"
-                            defaultValue=""  
+                            defaultValue=""
                             name="message"
                             className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 focus:ring-2 focus:ring-green-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                         />
