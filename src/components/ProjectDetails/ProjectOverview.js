@@ -24,8 +24,6 @@ export default function ProjectOverview(props) {
                 setDescription(desArray);
             }
         })
-        console.log(array)
-        console.log(desArray)
     }, []);
     const [project, setProject] = React.useState([]);
     const [description, setDescription] = React.useState([]);

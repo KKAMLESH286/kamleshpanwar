@@ -9,7 +9,9 @@ const { PUBLIC_URL } = process.env;
 
 ReactDOM.render(
   <SplashScreenProvider>
+    <BrowserRouter>
     <App basename={PUBLIC_URL} />
+    </BrowserRouter>
   </SplashScreenProvider>,
   document.getElementById('root')
 );

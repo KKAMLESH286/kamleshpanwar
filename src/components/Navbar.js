@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -11,15 +12,25 @@ export default function Navbar() {
           </a>
         </a>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-          <a href="#projects" className="mr-5 hover:text-white">
+          <Link
+            to={{ pathname: "/", hash: "#projects" }}
+            className="mr-5 hover:text-white">
             Past Work
-          </a>
-          <a href="#skills" className="mr-5 hover:text-white">
+          </Link>
+          <Link
+            to={{ pathname: "/", hash: "#skills" }}
+            // to="/skills"
+            //  href="#skills" 
+            className="mr-5 hover:text-white">
             Skills
-          </a>
-          <a href="#testimonials" className="mr-5 hover:text-white">
+          </Link>
+          <Link
+            to={{ pathname: "/", hash: "#testimonials" }}
+            // to="testimonials"
+            // href="#testimonials"
+            className="mr-5 hover:text-white">
             Testimonials
-          </a>
+          </Link>
         </nav>
         <a
           href="https://www.upwork.com/freelancers/~01c366439e2c692c0c"
