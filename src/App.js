@@ -1,22 +1,22 @@
-import React from "react";
-
-import About from "./components/About";
-import Contact from "./components/Contact.js";
+import React, { Suspense } from "react";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import BasePage from "./BasePage";
+import DashBoard from "./components/DashBoard";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Testimonials from "./components/Testimonials";
-import { toast, ToastContainer } from "react-toastify";
-export default function App() {
+import ProjectOverview from "./components/ProjectDetails/ProjectOverview";
+import { LayoutSplashScreen } from "./components/SplashScreen/SplashScreen";
+import RoutesPage from "./RoutesPage";
+
+export default function App({ basename }) {
   return (
-    <main className="text-gray-400 bg-gray-900  body-font">
+    <BrowserRouter>
       <Navbar />
-      <About />
-      <Projects />
-      <Skills />
-      <Testimonials />
-      <Contact />
-        <ToastContainer />
-    </main>
+      <Routes>
+        <Route exact path="/" element={<DashBoard />} />
+        <Route path={`/overview-details/:id`} element={<ProjectOverview />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }

@@ -1,8 +1,13 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
+import { Route } from "react-router";
 import { projects } from "../data";
+import ProjectOverview from "./ProjectDetails/ProjectOverview";
+import {Link} from "react-router-dom";
+import size from "./Assets/size.jpg";
 
 export default function Projects() {
+
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -12,7 +17,7 @@ export default function Projects() {
             Apps I've Built
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-          2+ years of Mobile App development experience with proficiency in developing cross-platform mobile apps using Flutter framework.
+            2+ years of Mobile App development experience with proficiency in developing cross-platform mobile apps using Flutter framework.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
@@ -35,6 +40,15 @@ export default function Projects() {
                     {project.title}
                   </h1>
                   <p className="leading-relaxed">{project.description}</p>
+                  <div className="p-5">
+                    <Link
+                      className=" bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      to={`/overview-details/${project.id}`}
+                      state={{ project }}
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </div>
               </div>
             </a>
