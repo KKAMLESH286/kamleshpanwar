@@ -1,45 +1,89 @@
-import { ArrowRightIcon } from '@heroicons/react/solid'
 import React from 'react'
-import { Link } from "react-router-dom"
-import { toAbsoluteUrl } from '../data'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 md:sticky top-0 z-10">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="ml-3 text-xl">
-            About Me
+    <footer className="border-t border-gray-800">
+      <div
+        className="
+        bg-gray-800
+          flex flex-wrap
+          flex-col	
+          space-between
+          items-center
+          justify-center
+          px-4
+          py-8
+        "
+      >
+
+        <div className="flex justify-center  mt-4 lg:mt-0">
+          <a href='https://facebook.com/kkamlesh286' target="blank">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              className="w-6 h-6 text-blue-600"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
           </a>
-        </a>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-          <Link
-            to={{ pathname: "/", hash: "#projects" }}
-            className="mr-5 hover:text-white">
-            Past Work
-          </Link>
-          <Link
-            to={{ pathname: "/", hash: "#skills" }}
-            // to="/skills"
-            //  href="#skills" 
-            className="mr-5 hover:text-white">
-            Skills
-          </Link>
-          <Link
-            to={{ pathname: "/", hash: "#testimonials" }}
-            // to="testimonials"
-            // href="#testimonials"
-            className="mr-5 hover:text-white">
-            Testimonials
-          </Link>
-        </nav>
-        <a
-          href="https://github.com/kkamlesh286"
-          className="inline-flex items-center text-white bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-          Follow Me
-          <ArrowRightIcon className="w-4 h-4 ml-1" />
-        </a>
+          <a className="ml-3" href='https://twitter.com/kkamlesh286' target="blank">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              className="w-6 h-6 text-blue-300"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a className="ml-3" href='https://instagram.com/kkamlesh286' target="blank">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              className="w-6 h-6 text-pink-400"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a className="ml-3" href='https://linkedin.com/in/kkamlesh286' target="blank">
+
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              className="w-6 h-6 text-blue-500"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
+        <div className="text-center text-white p-4" >
+    © 2022 Copyright:
+    <a className="text-white" href=""> Kamlesh Panwar</a>
+  </div>
       </div>
     </footer>
-  )
-}
+)}

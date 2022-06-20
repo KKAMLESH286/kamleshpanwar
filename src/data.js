@@ -33,8 +33,10 @@ export const projects = [
     title: "Tarakki",
     subtitle: "A Job portal for skilled labor",
     description:
-      ["1st", "2nd", "3rd"],
+    "Tarakki is a Job portal for skilled labor. It is a platform where you can find the best jobs for you. You can also post your own jobs and hire the best labor. You can search through the job postings, or post a job of your own.",
     image: toAbsoluteUrl(tarakki),
+    fullDescription: ["1st", "2nd", "3rd"]
+
     // link: "https://reactbootcamp.com",
   },
   {
