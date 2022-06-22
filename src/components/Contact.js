@@ -31,7 +31,8 @@ export default function Contact() {
 
     const dataPostSubmit = async (e) => {
         e.preventDefault();
-        let response = await axios.post("https://thingproxy.freeboard.io/fetch/https://personalmail-cloudfn-howdwtbzhq-de.a.run.app",
+        console.log(ContactUrl);
+        let response = await axios.post(ContactUrl,
             {
                 name: e.target[0].value,
                 email: e.target[1].value,
